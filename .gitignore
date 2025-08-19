@@ -144,6 +144,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Project assets (binary/model artifacts not for version control)
+assets/
+
 # Spyder project settings
 .spyderproject
 .spyproject
