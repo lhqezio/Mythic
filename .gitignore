@@ -144,8 +144,8 @@ ENV/
 env.bak/
 venv.bak/
 
-# Project assets (binary/model artifacts not for version control)
-assets/
+# Project runtimes (binary/model artifacts not for version control)
+runtimes/
 
 # Spyder project settings
 .spyderproject

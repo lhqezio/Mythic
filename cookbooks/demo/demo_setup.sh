@@ -91,39 +91,4 @@ else
   echo "Warning: requirements.txt not found at ${requirements_file}. Skipping dependency installation."
 fi
 
-# Ensure Piper voice model exists in a gitignored assets folder
-piper_assets_dir="${repo_root}/assets/piper_voices"
-voice_name="en_US-amy-low"
-voice_model_path="${piper_assets_dir}/${voice_name}.onnx"
-
-mkdir -p "${piper_assets_dir}" || {
-  echo "Error: Failed to create assets directory: ${piper_assets_dir}" >&2
-  exit 1
-}
-
-if [ ! -f "${voice_model_path}" ]; then
-  echo "Piper voice '${voice_name}' not found. Downloading to ${piper_assets_dir} ..."
-  python -m piper.download_voices --output-dir "${piper_assets_dir}" "${voice_name}" || {
-    echo "Error: Failed to download Piper voice '${voice_name}'." >&2
-    exit 1
-  }
-else
-  echo "Piper voice already present at: ${voice_model_path}. Skipping download."
-fi
-
-# Start JupyterLab from './demo' under repo root if it exists, else from repo root
-notebook_dir="${repo_root}/demo"
-if [ -d "${notebook_dir}" ]; then
-  cd "${notebook_dir}" || {
-    echo "Error: Failed to change directory to: ${notebook_dir}" >&2
-    exit 1
-  }
-else
-  echo "Warning: ${notebook_dir} not found; starting JupyterLab from repo root."
-  cd "${repo_root}" || {
-    echo "Error: Failed to change directory to repo root: ${repo_root}" >&2
-    exit 1
-  }
-fi
-echo "Starting JupyterLab in ${PWD} ..."
-exec python -m jupyterlab
+#

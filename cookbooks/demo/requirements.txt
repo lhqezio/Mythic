@@ -70,11 +70,11 @@ psutil==7.0.0
 pure_eval==0.2.3
 pycparser==2.22
 Pygments==2.19.2
-pyreadline3==3.5.4
+pyreadline3==3.5.4; platform_system == "Windows"
 python-dateutil==2.9.0.post0
 python-json-logger==3.3.0
-pywin32==311
-pywinpty==3.0.0
+pywin32==311; platform_system == "Windows"
+pywinpty==3.0.0; platform_system == "Windows"
 PyYAML==6.0.2
 pyzmq==27.0.1
 referencing==0.36.2
