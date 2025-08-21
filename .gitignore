@@ -146,6 +146,9 @@ venv.bak/
 
 # Project runtimes (binary/model artifacts not for version control)
 runtimes/
+output/
+demo/output/
+demo/runtimes/
 
 # Spyder project settings
 .spyderproject
@@ -208,3 +211,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific ignores for restructured project
+demo/*.log
+demo/__pycache__/
+demo/.ipynb_checkpoints/
+demo/.venv/
+demo/demo.log
