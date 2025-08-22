@@ -1,5 +1,7 @@
 # Mythic
 
+**This Repo is under construction**
+
 Mythic is a lightweight AI engine for generating and powering NPC brains: pre-generate or real-time, your call.
 
 ## 🚀 Quick Start
