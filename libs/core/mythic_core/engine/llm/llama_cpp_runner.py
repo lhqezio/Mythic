@@ -17,6 +17,7 @@ class LlamaCppRunner(BaseLLMRunner):
     def _initialize_model(self) -> None:
         try:
             from llama_cpp import Llama
+            print(f"Initializing llama.cpp model from {self.model_path}")
             
             # Filter out unsupported parameters for llama.cpp
             llama_config = {

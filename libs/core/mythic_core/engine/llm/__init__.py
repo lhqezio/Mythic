@@ -6,7 +6,7 @@ with support for multiple backends including llama.cpp and transformers.
 """
 
 from .base import BaseLLMRunner
-from .llama_cpp import LlamaCppRunner
+from .llama_cpp_runner import LlamaCppRunner
 from .transformers import TransformersRunner
 from .factory import LLMRunnerFactory
 from .config import ModelConfig, BackendType, DeviceType

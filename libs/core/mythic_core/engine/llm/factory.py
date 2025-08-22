@@ -6,7 +6,7 @@ from typing import Union
 
 from .base import BaseLLMRunner
 from .config import ModelConfig, BackendType
-from .llama_cpp import LlamaCppRunner
+from .llama_cpp_runner import LlamaCppRunner
 from .transformers import TransformersRunner
 
 
